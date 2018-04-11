@@ -1,0 +1,7 @@
+{
+  "popup_message": {"message": "הדף כעת ניתן לעריכה ליחצו על טקסט טתוכלו לערוך" },
+  "browser_action": {"message": "ערוך את הדף" },
+  "ext_desc": {"message": "ערוך את כל הדף הנוכחי" },
+  "ext_name": {"message": "ערוך את הדף בלחיצה אחת" }
+}
+

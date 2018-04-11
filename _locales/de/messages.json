@@ -1,0 +1,6 @@
+{
+  "browser_action": {"message": "Edit page" },
+  "ext_desc": {"message": "Give user ability to edit all text in page in one click" },
+  "ext_name": {"message": "1click Edit page" }
+}
+
