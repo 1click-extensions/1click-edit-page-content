@@ -1,1 +1,1 @@
-Merge windows to tabs
+1click-edit-page-content
