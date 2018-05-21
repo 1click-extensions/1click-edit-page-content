@@ -9,6 +9,6 @@ if (!localStorage.created) {
 
 chrome.browserAction.onClicked.addListener(function(tab){
   chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-    chrome.tabs.sendMessage(tabs[0].id, {action: "make_editable"});
+    chrome.tabs.executeScript(null, {file: "js/script.js"});
   });
 });
