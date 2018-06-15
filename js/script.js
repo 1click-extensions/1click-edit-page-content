@@ -2,7 +2,13 @@ chrome.runtime.onMessage.addListener(function(message){
 	console.log(message)
 	switch(message.action){
         case 'make_editable':
-        document.getElementsByTagName('html')[0].setAttribute('contenteditable','true');
+        
+        break;
+    }
+});
+
+function makeEditable(){
+    document.getElementsByTagName('html')[0].setAttribute('contenteditable','true');
         var divPopUp = document.createElement('div');
         divPopUp.classList.add('one-click-editable-popup');
         divPopUp.innerHTML = '<div>' + chrome.i18n.getMessage("popup_message") + '</div>' + 
@@ -16,7 +22,11 @@ chrome.runtime.onMessage.addListener(function(message){
         //console.log(divPopUp);
         setTimeout(function(){
             document.body.removeChild(divPopUp);
+            setTimeout(function(){
+                chrome.runtime.sendMessage({
+                    action: 'injectJs'
+                });
+            }, 200);
         }, 4000);
-        break;
-    }
-});
+}
+makeEditable();

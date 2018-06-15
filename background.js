@@ -9,6 +9,6 @@ if (!localStorage.created) {
 
 chrome.browserAction.onClicked.addListener(function(tab){
   chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-    chrome.tabs.executeScript(null, {file: "js/script.js"});
+    chrome.tabs.executeScript(tabs[0].id, {file: "js/script.js"});
   });
 });
